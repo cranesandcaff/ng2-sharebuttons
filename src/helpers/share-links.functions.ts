@@ -118,17 +118,17 @@ export module ShareLinks {
     }
 
     export function emailShare(args: ShareArgs): string {
-        let shareUrl = 'mailto:'
+        let shareUrl = 'mailto:';
 
-        if(args.title){
-            shareUrl += `?subject=${args.title}`
+        if (args.title) {
+            shareUrl += `?subject=${args.title}`;
         }
 
-        if(args.description){
-            shareUrl += `?body=${args.description}`
+        if (args.description) {
+            shareUrl += `?body=${args.description}`;
         }
 
-        return shareUrl
+        return shareUrl;
     }
 
 }

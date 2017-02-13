@@ -48,7 +48,7 @@ export class ShareButtonsComponent implements OnInit, OnChanges {
     @Input() stumbleUpOn: any = '<i class="fa fa-stumbleupon"></i>';
     @Input() reddit: any = '<i class="fa fa-reddit-alien"></i>';
     @Input() whatsApp: any = '<i class="fa fa-whatsapp"></i>';
-    @Input() email: any = '<i class="fa fa-email"></i>'
+    @Input() email: any = '<i class="fa fa-email"></i>';
 
     @Output() count = new EventEmitter<number>();
     @Output() popUpClosed = new EventEmitter<ShareProvider>();
@@ -123,6 +123,14 @@ export class ShareButtonsComponent implements OnInit, OnChanges {
                 ShareProvider.WHATSAPP,
                 this.whatsApp,
                 `whatsapp ${this.buttonClass}`
+            ));
+        }
+
+        if (this.email) {
+            this.buttons.push(new ShareButton(
+                ShareProvider.EMAIL,
+                this.email,
+                `email ${this.buttonClass}`
             ));
         }
     }
