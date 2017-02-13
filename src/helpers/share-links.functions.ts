@@ -117,4 +117,18 @@ export module ShareLinks {
         return shareUrl;
     }
 
+    export function emailShare(args: ShareArgs): string {
+        let shareUrl = 'mailto:'
+
+        if(args.title){
+            shareUrl += `?subject=${args.title}`
+        }
+
+        if(args.description){
+            shareUrl += `?body=${args.description}`
+        }
+
+        return shareUrl
+    }
+
 }

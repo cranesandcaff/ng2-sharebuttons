@@ -42,6 +42,8 @@ export module Helper {
                 return ShareLinks.pinShare(args);
             case ShareProvider.WHATSAPP:
                 return ShareLinks.whatsappShare(args);
+            case ShareProvider.EMAIL:
+                return ShareLinks.emailShare(args);
             default:
                 return '';
         }

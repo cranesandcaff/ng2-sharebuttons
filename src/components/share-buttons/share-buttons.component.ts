@@ -48,6 +48,7 @@ export class ShareButtonsComponent implements OnInit, OnChanges {
     @Input() stumbleUpOn: any = '<i class="fa fa-stumbleupon"></i>';
     @Input() reddit: any = '<i class="fa fa-reddit-alien"></i>';
     @Input() whatsApp: any = '<i class="fa fa-whatsapp"></i>';
+    @Input() email: any = '<i class="fa fa-email"></i>'
 
     @Output() count = new EventEmitter<number>();
     @Output() popUpClosed = new EventEmitter<ShareProvider>();

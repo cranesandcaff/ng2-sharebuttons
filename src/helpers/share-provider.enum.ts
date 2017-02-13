@@ -7,5 +7,6 @@ export enum ShareProvider {
     GOOGLEPLUS,
     TUMBLR,
     PINTEREST,
-    WHATSAPP
+    WHATSAPP,
+    EMAIL
 }
